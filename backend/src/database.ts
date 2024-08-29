@@ -1,5 +1,4 @@
 import { MongoClient, Db } from 'mongodb';
-// import { MongoClient } from 'mongodb';
 
 export const Mongo = {
   client: null as MongoClient | null,

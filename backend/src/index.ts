@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import { config } from 'dotenv';
-import { Mongo } from './database/mongo';
+import { Mongo } from './database';
 
 config();
 
