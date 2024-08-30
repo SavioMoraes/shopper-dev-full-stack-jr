@@ -1,1 +1,1 @@
-## Projeto backend para o processo seletivo da Shopper, utilizando a API da Gemini.
+## Projeto backend para o processo seletivo da Shopper.
