@@ -1,24 +1,11 @@
-version: '3'
 services:
   app:
     build: .
     ports:
-      - "3000:3000"
+      - '3000:3000'
     environment:
-      - NODE_ENV=development
+      - MONGO_URI=mongodb://mongo:27017
+      - DB_NAME=shopper
       - GEMINI_API_KEY=${GEMINI_API_KEY}
-      - MONGO_URL=mongodb://mongo:27017/backend
-    volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
-    command: npm run dev
-
-  mongo:
-    image: mongo:latest
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo-data:/data/db
-
-volumes:
-  mongo-data:
+    depends_on:
+      - mongo
